@@ -1,9 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="system"> {{ c.system }}</h2>
-<h1>{{ c.race }} {{ c.class_name }}</h1>
-<h2 class="appearence">{{ c.background }}</h2>
+<style>
+#output dd{
+  margin: 10px 0;
+}
+#output dt{
+  font-size: 1.5em;
+  line-height: 1.0em;
+ 
+}
+
+
+
+</style>
+<div id="output">
+    <noscript>
+        <dl>
+            <dt>What the fuck! You don't even have JavaScript enabled!</dt>
+            <dd>You need to enable it to see all the fucking cool shit on this website...</dd>
+        </dl>
+    </noscript>
+</div>
 
 <table class="attr">
     <tr>
@@ -49,7 +67,18 @@
     <li><b>Bond</b>: {{ c.bond }}</li>
     <li><b>Flaw</b>: {{ c.flaw }}</li>
 </ul>
-
+<a id="generate" href="/5e" title="Hit me again!"></a>
+        <footer>
+            <div id="about">If you make it, make sure you make it <a href="http://www.opensource.org/" target="blank">Open Source</a></div>
+            <div id="credit">Built with <a href="https://github.com/soulwire/WTFEngine" title="An HTML / CSS / JavaScript template for creating WhatTheFuckIsMyMashup.com style web sites" target="_blank">WTF Engine</a> by <a href="http://blog.soulwire.co.uk/" title="Made by Justin Windle @soulwire">Justin</a></div>
+            <div>Inspired by <a href="http://whatthefuckshouldimakefordinner.com/" target="_blank">WTFSIMFD<a/></div>
+        </footer>
+        <img class="loading" src="/static/WTFEngine/images/loading.gif">
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.2/zepto.min.js"></script>
+    <script>window.Zepto || document.write('<script src="scripts/vendor/zepto.min.js"><\/script>')</script>
+    <script src="/static/WTFEngine/scripts/wtf.js"></script>
+    <script src="/static/WTFEngine/scripts/main.js"></script>
 
 <!--
 <div id="extras">
