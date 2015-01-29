@@ -83,3 +83,5 @@ class Character(object):
 
         for processor in processors:
             processor(self).process()
+
+       

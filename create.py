@@ -1,4 +1,4 @@
-from flask import request, Response, redirect, render_template, url_for, Flask
+from flask import request, Response, redirect, render_template, url_for, Flask, jsonify
 
 import adventuregame
 import character
@@ -34,6 +34,21 @@ def with_sign(number):
 @app.route('/5e/')
 def fifth_edition():
     return render_template("5e.html", c=fifth.Character())
+
+@app.route('/5e-json/')
+def fifth_edition_json():
+    c = fifth.Character()
+    
+    return jsonify(race=c.race,
+                   scores=c.scores,
+                   bonuses=c.bonuses,
+                   skills=c.skills,
+                   personality=c.personality_trait,
+                   background=c.background,
+                   defining_event=c.defining_event,
+                   ideal=c.ideal,
+                   bond=c.bond,
+                   flaw=c.flaw)
 
 @app.route('/3d6/')
 def three_dee_six():
