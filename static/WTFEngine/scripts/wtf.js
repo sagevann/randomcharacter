@@ -214,7 +214,7 @@ var WTF = (function() {
             $('.defining').hide();
         }
 
-        $('.trait span').text( data.personality_trait);
+        $('.trait span').text( data.personality);
         $('.ideal span').text( data.ideal);
         $('.bond span').text( data.bond);
         $('.flaw span').text( data.flaw);
