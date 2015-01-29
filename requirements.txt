@@ -4,6 +4,5 @@ MarkupSafe==0.23
 Werkzeug==0.9.6
 bundle==1.1.2
 itsdangerous==0.24
-vboxapi==1.0
 wsgiref==0.1.2
 yolk==0.4.3
