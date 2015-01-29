@@ -1,3 +1,4 @@
+import os
 from flask import request, Response, redirect, render_template, url_for, Flask, jsonify
 
 import adventuregame
