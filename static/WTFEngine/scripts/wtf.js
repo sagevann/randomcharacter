@@ -189,7 +189,7 @@ var WTF = (function() {
     }
 
     function updateCharacter(data){
-        var stats = [ 'str','con','dex','int','wis'];
+        var stats = [ 'str','con','dex','int','wis', 'cha'];
 
         for( var stat in stats ){
             var s = getScore( data, stats[stat]),
